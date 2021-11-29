@@ -21,12 +21,6 @@ body {
   margin: 1em;
 }
 
-.search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 button {
   margin: 0.5em;
   border-radius: 50%;
@@ -44,6 +38,12 @@ button:hover {
   background: #7c7c7c6b;
 }
 
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .search-bar {
   border: none;
   outline: none;
@@ -54,7 +54,6 @@ button:hover {
   font-size: 120%;
   width: 95%;
 }
-
 
 .flex {
   display: flex;
@@ -91,3 +90,6 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%,
     margin-bottom: 10px;
     color: white;
 }
+
+/* footer */
+
