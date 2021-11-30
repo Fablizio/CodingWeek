@@ -93,3 +93,49 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%,
 
 /* footer */
 
+footer {
+  background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
+  padding: 0px 100px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  position:absolute;
+  bottom: -16px;
+  width: 91%;
+  padding-bottom: 62px;
+  height: 56px;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #ff0000;
+  text-decoration: none;
+
+}
+.social {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 16px;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "Facebook Linkedin Instagram"
+    "Name Name Name";
+
+
+}
+
+.Facebook { grid-area: Facebook; }
+
+.Linkedin { grid-area: Linkedin; }
+
+.Instagram { grid-area: Instagram; }
+
+.Name { grid-area: Name; }
