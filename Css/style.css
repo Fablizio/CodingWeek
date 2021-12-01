@@ -8,6 +8,9 @@ body {
   font-family: "Merriweather", serif;
   background-image: url(https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg);
   background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
 }
 
 /* Weather card style */
@@ -64,7 +67,6 @@ button:hover {
   margin-left: 10px;
 }
 
-
 /* temperature */
 .temp {
   margin: 0;
@@ -72,23 +74,33 @@ button:hover {
 }
 
 .temp-min {
-    margin: 0;
-    margin-bottom: 10px;
-    color: white;
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  margin: 0;
+  margin-bottom: 10px;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
 .temp-max {
-    margin: 0;
-    margin-bottom: 10px;
-    color: white;
-background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  margin: 0;
+  margin-bottom: 10px;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
 }
 
 .feels-like {
-    margin: 0;
-    margin-bottom: 10px;
-    color: white;
+  margin: 0;
+  margin-bottom: 10px;
+  color: white;
 }
 
 /* footer */
@@ -96,14 +108,14 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%,
 footer {
   background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
   padding: 0px 100px;
-  text-align: center;
   color: white;
-  font-size: 18px;
-  position:absolute;
-  bottom: -16px;
   width: 91%;
   padding-bottom: 62px;
   height: 56px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 footer a {
@@ -113,29 +125,41 @@ footer a {
 footer a:hover {
   color: #ff0000;
   text-decoration: none;
-
 }
 .social {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 0px 16px;
-  grid-auto-flow: row;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  align-items: center;
+  grid-auto-rows: 1fr;
+  gap: 0px 22px;
+  grid-auto-flow: column;
   grid-template-areas:
-    "Facebook Linkedin Instagram"
-    "Name Name Name";
-
-
+    "Name Name Name Name"
+    "Face Linke Inst Git";
+  height: 150px;
 }
 
-.Facebook { grid-area: Facebook; }
+.Name {
+  grid-area: Name;
+  text-align: center;
+}
 
-.Linkedin { grid-area: Linkedin; }
+.Face {
+  grid-area: Face;
+  text-align: center;
+}
 
-.Instagram { grid-area: Instagram; }
+.Linke {
+  grid-area: Linke;
+  text-align: center;
+}
 
-.Name { grid-area: Name; }
+.Inst {
+  grid-area: Inst;
+  text-align: center;
+}
+
+.Git {
+  grid-area: Git;
+  text-align: center;
+}
